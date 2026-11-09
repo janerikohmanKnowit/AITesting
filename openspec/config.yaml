@@ -1,0 +1,26 @@
+schema: spec-driven
+context: |
+  This is a sandbox for AI-assisted spec-driven development.
+  Rust is the default for implementation examples, not a restriction on future products.
+  Users can request planning only or end-to-end delivery. Do not add review pauses
+  to end-to-end work unless a real blocker or explicit user instruction requires it.
+  OpenSpec structures artifacts; the host AI performs reasoning and code generation.
+rules:
+  proposal:
+    - State the user problem, scope, non-goals, assumptions, and affected capabilities.
+  specs:
+    - Describe observable behavior with SHALL requirements and testable WHEN/THEN scenarios.
+    - Include boundary cases and invalid-input behavior where applicable.
+  design:
+    - Explain choices and trade-offs, dependency needs, and the verification approach.
+  tasks:
+    - Break work into small independently verifiable checkboxes.
+    - Include test-first behavior checks, implementation, full verification, and documentation.
+operations:
+  apply:
+    guidance:
+      - Follow AGENTS.md; capture actual test outcomes in verification.md.
+      - Only check off tasks when their full acceptance criteria pass.
+  archive:
+    guidance:
+      - Run npm run verify and inspect verification.md before archiving.

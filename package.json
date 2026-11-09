@@ -1,0 +1,18 @@
+{
+  "name": "aitesting-spec-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenSpec-driven AI development workflow",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "spec": "openspec",
+    "spec:validate": "openspec validate --all --strict --no-interactive",
+    "setup": "bash scripts/setup.sh",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "@fission-ai/openspec": "1.16.1"
+  }
+}
